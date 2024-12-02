@@ -1,5 +1,11 @@
 # Python Class
-This repository contains materials for a Python class.
+This repository contains materials for a Python class and each classes code will be proviede here.
+
+## Project Slides
+Project slides will be provided in google drive in this link
+```bash
+https://drive.google.com/drive/folders/1IXeVHChPpSF_rpQ8qGsvT3wpNnuZzSBu?usp=sharing
+```
 
 ## Installation
 
