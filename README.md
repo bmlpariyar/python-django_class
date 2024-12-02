@@ -14,7 +14,7 @@ https://drive.google.com/drive/folders/1IXeVHChPpSF_rpQ8qGsvT3wpNnuZzSBu?usp=sha
 To start, you need to have Python installed on your computer. You can download the latest version of Python from the official Python website: https://www.python.org/downloads/
 
 Once you have downloaded the installation file, follow the instructions to install Python on your computer.
-Please remember to check the "Add Python to Path" option during the installation process.
+_**Please remember to check the "Add Python to Path" option during the installation process.**_
 
 ### Installing VS Code
 
