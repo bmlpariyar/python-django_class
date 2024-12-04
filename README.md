@@ -1,5 +1,11 @@
 # Python Class
-This repository contains materials for a Python class.
+This repository contains materials for a Python class and each classes code will be proviede here.
+
+## Project Slides
+Project slides will be provided in google drive in this link
+```bash
+https://drive.google.com/drive/folders/1IXeVHChPpSF_rpQ8qGsvT3wpNnuZzSBu?usp=sharing
+```
 
 ## Installation
 
@@ -8,7 +14,7 @@ This repository contains materials for a Python class.
 To start, you need to have Python installed on your computer. You can download the latest version of Python from the official Python website: https://www.python.org/downloads/
 
 Once you have downloaded the installation file, follow the instructions to install Python on your computer.
-Please remember to check the "Add Python to Path" option during the installation process.
+_**Please remember to check the "Add Python to Path" option during the installation process.**_
 
 ### Installing VS Code
 
