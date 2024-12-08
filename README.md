@@ -42,6 +42,7 @@ Once you have cloned the repository, open the folder in VS Code by clicking on t
 You should now be able to see the files in the repository in the VS Code file explorer.
 
 # Python virtual enviroment
+To make a python virtual enviroment run this command:
 ```bash
 python -m venv venv
 ```
