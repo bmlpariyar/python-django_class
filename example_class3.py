@@ -1,10 +1,10 @@
-student = [
-    {"name":'Bimal', "age":24, "grades":("A", "A+", "B")},
-    {"name":'Ram', "age":25, "grades":("A", "A+", "B")},
-    {"name":'Hari', "age":29, "grades":("A", "A+", "B")},
-]
+# student = [
+#     {"name":'Bimal', "age":24, "grades":("A", "A+", "B")},
+#     {"name":'Ram', "age":25, "grades":("A", "A+", "B")},
+#     {"name":'Hari', "age":29, "grades":("A", "A+", "B")},
+# ]
 
-print(student[0]["grades"][0])
+# print(student[0]["grades"][0])
 
 
 
@@ -52,3 +52,4 @@ i = 1
 while i <= num:
     print(i)
     i+=1
+    
