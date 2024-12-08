@@ -40,3 +40,27 @@ git clone https://github.com/bmlpariyar/python-django_class
 Once you have cloned the repository, open the folder in VS Code by clicking on the "File" menu and selecting "Open Folder" and then selecting the folder that you just cloned.
 
 You should now be able to see the files in the repository in the VS Code file explorer.
+
+# Python virtual enviroment
+```bash
+python -m venv venv
+```
+## Activating python virtual env
+### On Windows: 
+```bash
+cd path/to/virtualenv
+.\venv\Scripts\activate
+```
+### On Linux/Mac
+```bash
+cd path/to/virtualenv
+source venv/bin/activate
+```
+
+# Required Installations:
+Activate the virtual enviroment first and after that run these commands:
+```bash
+pip install django
+```
+
+
