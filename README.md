@@ -1,12 +1,4 @@
-# Python Class Repository
-
-## Table of Contents
-- [Project Overview](#project-overview)
-- [Installation Guide](#installation-guide)
-- [Repository Structure](#repository-structure)
-- [Getting Started](#getting-started)
-- [Project Resources](#project-resources)
-- [Troubleshooting](#troubleshooting)
+# Python/Django Class Repository
 
 ## Project Overview
 This repository contains materials for a Python class and each classes code will be proviede here.
