@@ -94,7 +94,7 @@ pip install django
 4. Verify Django Admin Commands
 ```bash
 # Show all available Django admin commands
-django-admin help
+django-admin -h
 ```
 
 5. Create Django Project
