@@ -1,67 +1,119 @@
-# Python Class
-This repository contains materials for a Python class and each classes code will be proviede here.
+# Python Class Repository
 
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Installation Guide](#installation-guide)
+- [Repository Structure](#repository-structure)
+- [Getting Started](#getting-started)
+- [Project Resources](#project-resources)
+- [Troubleshooting](#troubleshooting)
+
+## Project Overview
+This repository contains materials for a Python class and each classes code will be proviede here.
 ## Project Slides
-Project slides will be provided in google drive in this link
+The project slides can be accessed through the following Google Drive link:
 ```bash
 https://drive.google.com/drive/folders/1IXeVHChPpSF_rpQ8qGsvT3wpNnuZzSBu?usp=sharing
 ```
+## Installation Guide
 
-## Installation
+### 1. Installing Python
+To get started, ensure you have Python installed on your computer:
 
-### Installing Python
+- Download the latest version of Python from the [official Python website](https://www.python.org/downloads/)
+- During installation, **check the option "`Add Python to PATH`"** to avoid any setup issues
+- Verify installation by opening a terminal/command prompt and running:
+  ```bash
+  python --version
+  # this should return:
+  # python 3.x.x (latest version of python)
+  ```
 
-To start, you need to have Python installed on your computer. You can download the latest version of Python from the official Python website: https://www.python.org/downloads/
+### 2. Installing Visual Studio Code (VS Code)
+- Download VS Code from the [official VS Code website](https://code.visualstudio.com/)
+- Follow the installation instructions for your operating system
+- Complete the installation process
 
-Once you have downloaded the installation file, follow the instructions to install Python on your computer.
-_**Please remember to check the "Add Python to Path" option during the installation process.**_
+### 3. Installing the Python Extension for VS Code
+- Open VS Code
+- Navigate to the Extensions marketplace:
+  - Windows/Linux: `Ctrl + Shift + X`
+  - MacOS: `Cmd + Shift + X`
+- Search for "Python"
+- Click **Install** on the official Python extension by Microsoft
 
-### Installing VS Code
+### 4. Cloning the Repository
+There are two primary methods to clone the repository:
 
-Next, you need to install Visual Studio Code (VS Code) which is a free code editor. You can download the latest version of VS Code from the official VS Code website: https://code.visualstudio.com/Download
-
-Once you have downloaded the installation file, follow the instructions to install VS Code on your computer.
-
-### Installing Python Extension
-
-Once you have installed VS Code, you need to install the Python extension. You can install the Python extension from the Extensions marketplace in VS Code.
-
-To open the Extensions marketplace, open VS Code and click on the Extensions icon in the left sidebar or press `Ctrl + Shift + X` (Windows/Linux) or `Cmd + Shift + X` (macOS).
-
-Search for "Python" in the Extensions marketplace and click on the "Install" button to install the Python extension.
-
-### Cloning the Repository
-
-Once you have installed the Python extension, you can clone this repository by clicking on the "Clone or download" button on the GitHub page for this repository.
+#### Using HTTPS:
 ```bash
 git clone https://github.com/bmlpariyar/python-django_class
 ```
+## Repository Structure
+```
+book_review_platform/
+├── book_review_platform/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── wsgi.py
+├── manage.py
+```
 
-Once you have cloned the repository, open the folder in VS Code by clicking on the "File" menu and selecting "Open Folder" and then selecting the folder that you just cloned.
 
-You should now be able to see the files in the repository in the VS Code file explorer.
+## Django Project Setup
 
-# Python virtual enviroment
-To make a python virtual enviroment run this command:
+### Installing Django
+First, ensure you have pip installed:
 ```bash
+python -m pip install --upgrade pip
+```
+
+### Creating a Django Project
+
+1. Create a Django Project Folder
+```bash
+mkdir Django
+cd Django
+```
+
+2. Create and Activate Virtual Environment
+```bash
+# Create virtual environment
 python -m venv venv
-```
-## Activating python virtual env
-### On Windows: 
-```bash
-cd path/to/virtualenv
-.\venv\Scripts\activate
-```
-### On Linux/Mac
-```bash
-cd path/to/virtualenv
+
+# Activate virtual environment
+# On Windows:
+venv\Scripts\activate
+# On macOS/Linux:
 source venv/bin/activate
 ```
+Note: The terminal should have venv at the start like:
+```bash
+(venv) path/to/your/project
+```
 
-# Required Installations:
-Activate the virtual enviroment first and after that run these commands:
+3. Install Django:
 ```bash
 pip install django
 ```
 
+4. Verify Django Admin Commands
+```bash
+# Show all available Django admin commands
+django-admin help
+```
 
+5. Create Django Project
+```bash
+# Create a new Django project
+django-admin startproject book_review_platform
+```
+
+6. Run Development Server
+```bash
+# Start the development server
+python manage.py runserver
+```
+---
