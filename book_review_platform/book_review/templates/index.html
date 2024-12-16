@@ -1,11 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Review</title>
-</head>
-<body>
-    <h2>This is a index page in html</h2>
-</body>
-</html>
+{% extends 'base.html' %}
+
+
+{% block content%}
+ <h1>This is a index block</h1>
+ {% for book in books %}
+    <h1>{{book.title}}</h1>
+    <ul>
+        <li>{{book.author}}</li>
+        <li>{{book.description}}</li>
+        <li>{{book.published_date}}</li>
+
+    </ul>
+ {% endfor %}
+{% endblock content%}
