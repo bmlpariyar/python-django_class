@@ -109,3 +109,11 @@ django-admin startproject book_review_platform
 python manage.py runserver
 ```
 ---
+# Installation packages for project:
+Note: For all installation first activate virtual enviroment and install this packages
+```bash
+#For image processing:
+pip install pillow
+-------------------------------------------------------------
+```
+---
