@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Details Page</h1>
+
+    <h3>{{book.title}}</h3>
+    <p>Description: {{book.description}}</p>
+    <p>Author: {{book.author}}</p>
+    <p>Date : {{book.published_date}}</p>
+    <br>
+    <hr>
+
+{% endblock content %}

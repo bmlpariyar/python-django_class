@@ -2,14 +2,12 @@
 
 
 {% block content%}
- <h1>This is a index block</h1>
+ <h1>Book Title</h1>
  {% for book in books %}
-    <h1>{{book.title}}</h1>
-    <ul>
-        <li>{{book.author}}</li>
-        <li>{{book.description}}</li>
-        <li>{{book.published_date}}</li>
-
-    </ul>
+    <h4>
+        <a href="{% url "book_details" book.id %}">
+            Title: {{book.title}}
+        </a>
+    </h4>
  {% endfor %}
 {% endblock content%}

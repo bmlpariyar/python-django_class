@@ -13,3 +13,10 @@ def about(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+
+def book_details(request, book_id):
+    books = Book.objects.get(id=book_id)
+    context = {'book': books}
+    return render(request, 'book_details.html', context)
