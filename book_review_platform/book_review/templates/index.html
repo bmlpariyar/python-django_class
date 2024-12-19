@@ -3,6 +3,12 @@
 
 {% block content%}
  <h1>Book Title</h1>
+ <button>
+    <a href="{% url 'new_book' %}">
+        New Book
+    </a>
+</button>
+ <hr>
  {% for book in books %}
     <h4>
         <a href="{% url "book_details" book.id %}">

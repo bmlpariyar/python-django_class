@@ -7,6 +7,12 @@
     <p>Description: {{book.description}}</p>
     <p>Author: {{book.author}}</p>
     <p>Date : {{book.published_date}}</p>
+    <button>
+        <a href="{% url "edit_book" book.id %}">Edit</a>
+    </button>
+    <button>
+        <a href="{% url "delete_book" book.id %}">Delete</a>
+    </button>
     <br>
     <hr>
 
