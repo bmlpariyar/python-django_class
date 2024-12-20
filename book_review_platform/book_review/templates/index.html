@@ -10,6 +10,11 @@
 </button>
  <hr>
  {% for book in books %}
+ {% if book.cover_image %}
+ <img src="{{book.cover_image.url}}" alt="" height='150' width='100'>
+ {% else %}
+ <p>No image</p>
+ {% endif %}
     <h4>
         <a href="{% url "book_details" book.id %}">
             Title: {{book.title}}
