@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Book, Review
-from .forms import BookForm
+from .forms import BookForm, ReviewForm
 # Create your views here.
 
 def index(request):
@@ -20,7 +20,8 @@ def contact(request):
 def book_details(request, book_id):
     book = Book.objects.get(id=book_id)
     reviews = book.review_set.all()
-    context = {'book': book, 'reviews': reviews}
+    ratings = Review.REVIEW_CHOICES
+    context = {'book': book, 'reviews': reviews, 'ratings': ratings}
     return render(request, 'book_details.html', context)
 
 
@@ -54,4 +55,18 @@ def edit_book(request, book_id):
         form = BookForm(instance=book)
     context = {'form': form}
     return render(request, 'new_book.html', context)
+
+
+def add_review(request, book_id):
+    book = get_object_or_404(Book, id=book_id)
+    if request.method == "POST":
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.book = book
+            review.user = request.user
+            review.save()
+    else:
+        form = ReviewForm()    
+    return redirect('book_details', book_id)
     

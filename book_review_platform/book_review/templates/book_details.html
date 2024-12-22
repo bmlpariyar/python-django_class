@@ -24,5 +24,27 @@
             <p>{{review.content}}</p>
         {% endfor %}
     </div>
+    <hr>
+    <div>
+        <form action="{% url "add_review" book.id %}" method='post'>
+            {% csrf_token %}
+            <div>
+                <label for="ratings">Ratings</label>
+                <select name="ratings" id="ratings">
+                    <option value="">Select</option>
+                    {% for rating in ratings %}
+                        <option value="{{rating.0}}">{{rating.1}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <label for="content">Review Contetnt</label>
+                <textarea name="content" id="content"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
 
 {% endblock content %}
