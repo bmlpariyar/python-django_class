@@ -31,3 +31,7 @@ class Review(models.Model):
     ratings = models.IntegerField(choices=REVIEW_CHOICES)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    
+    
+    def __str__(self):
+        return f"{self.book.title}-{self.user.username}"

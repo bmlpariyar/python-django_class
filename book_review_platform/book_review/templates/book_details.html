@@ -16,4 +16,13 @@
     <br>
     <hr>
 
+
+    <div>
+        <h1>Reivews</h1>
+        {% for review in reviews %}
+            <h1>{{review.user.username}} - {{review.ratings}} stars</h1>
+            <p>{{review.content}}</p>
+        {% endfor %}
+    </div>
+
 {% endblock content %}
