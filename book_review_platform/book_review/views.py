@@ -69,4 +69,22 @@ def add_review(request, book_id):
     else:
         form = ReviewForm()    
     return redirect('book_details', book_id)
+
+
+
+def delete_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+    review.delete()
+    return redirect('book_details', review.book.id)
     
+
+
+def edit_review(request, review_id):
+    review = get_object_or_404(Review, id=review_id)
+    if request.method == "POST":
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+    else:
+        form = ReviewForm(instance=review)
+    return redirect('book_details', review.book.id)
