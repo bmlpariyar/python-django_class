@@ -22,6 +22,8 @@
         {% for review in reviews %}
             <h1>{{review.user.username}} - {{review.ratings}} stars</h1>
             <p>{{review.content}}</p>
+            {% include "edit_review.html" %}
+            <button>Edit</button>
             <button>
                 <a href="{% url "delete_review" review.id %}">Delete</a>
             </button>

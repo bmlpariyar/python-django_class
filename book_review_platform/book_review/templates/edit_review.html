@@ -1,0 +1,23 @@
+<div style="border:1px solid black;padding:30px;">
+    <h3>Edit Review</h3>
+    <form action="{% url "add_review" book.id %}" method='post'>
+        {% csrf_token %}
+        <div>
+            <label for="ratings">Ratings</label>
+            <select name="ratings" id="ratings">
+                <option value="">Select</option>
+                {% for rating in ratings %}
+                    <option value="{{rating.0}}" {% if rating.0 == review.ratings %}selected{% endif %} >{{rating.1}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <label for="content">Review Contetnt</label>
+            <textarea name="content" id="content">{{review.content}}</textarea>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <hr>
+</div>
