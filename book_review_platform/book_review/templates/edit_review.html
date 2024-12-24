@@ -31,6 +31,6 @@
 <script>
     function showEditForm(review_id){
         edit_from = document.getElementById('edit-form-' + review_id);
-        edit_from.style.display='block';
+        edit_from.style.display = edit_from.style.display == "none" ? "block" : "none";
     }
 </script>

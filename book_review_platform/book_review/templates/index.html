@@ -2,6 +2,15 @@
 
 
 {% block content%}
+<strong>Logged in user: 
+    <i>
+        {% if user.is_authenticated %}
+            {{user.username}}
+        {% else %}
+            None
+        {% endif %}
+    </i>
+</strong>
  <h1>Book Title</h1>
  <button>
     <a href="{% url 'new_book' %}">

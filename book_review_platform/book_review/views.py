@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Book, Review
 from .forms import BookForm, ReviewForm
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 def index(request):
@@ -24,7 +25,7 @@ def book_details(request, book_id):
     context = {'book': book, 'reviews': reviews, 'ratings': ratings}
     return render(request, 'book_details.html', context)
 
-
+@login_required
 def new_boook(request):
     if request.method == "POST":
         form= BookForm(request.POST, request.FILES)
