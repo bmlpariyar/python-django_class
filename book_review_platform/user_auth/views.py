@@ -22,6 +22,7 @@ def signup(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('login')
         else:
             print(form.errors)
     else:
@@ -33,3 +34,6 @@ def signup(request):
 def user_logout(request):
     logout(request)
     return redirect('home')
+
+
+
