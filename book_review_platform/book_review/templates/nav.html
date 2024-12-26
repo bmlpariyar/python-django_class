@@ -1,12 +1,14 @@
-<nav>
-    <ul>
-        <li><a href="{% url "home" %}">Home</a></li>
-        <li><a href="{% url "about"%}">About</a></li>
-        <li><a href="{% url "contact" %}">Contact</a></li>
-        <li><a href="{% url "login" %}">Login</a></li>
-        <li><a href="{% url "signup" %}">Signup</a></li>
-        <li><a href="{% url "logout" %}">Logout</a></li>
-
-
+<nav class="px-5 py-3 bg-blue-500 text-white">
+    <ul class="flex justify-between">
+        <div class="flex space-x-2">
+            <li><a href="{% url "home" %}" class="hover:border-b-2">Home</a></li>
+            <li><a href="{% url "about"%}" class="hover:border-b-2">About</a></li>
+            <li><a href="{% url "contact" %}" class="hover:border-b-2">Contact</a></li>
+        </div>
+        <div class="flex space-x-2">
+            <li><a href="{% url "login" %}" class="hover:border-b-2">Login</a></li>
+            <li><a href="{% url "signup" %}" class="hover:border-b-2">Signup</a></li>
+            <li><a href="{% url "logout" %}" class="hover:border-b-2">Logout</a></li>
+        </div>
     </ul>
 </nav>

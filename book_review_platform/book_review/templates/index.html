@@ -11,23 +11,26 @@
         {% endif %}
     </i>
 </strong>
- <h1>Book Title</h1>
- <button>
-    <a href="{% url 'new_book' %}">
+ <h1 class="text-3xl font-bold my-5">Book Title</h1>
+    <a href="{% url 'new_book' %}" class="px-3 py-2 bg-blue-500 rounded-lg text-white hover:bg-blue-600">
         New Book
     </a>
-</button>
- <hr>
- {% for book in books %}
- {% if book.cover_image %}
- <img src="{{book.cover_image.url}}" alt="" height='150' width='100'>
- {% else %}
- <p>No image</p>
- {% endif %}
-    <h4>
+ <hr class="my-3">
+ <div class="grid grid-cols-4 space-x-2">
+     {% for book in books %}
+     <div class="py-5">
+        {% if book.cover_image %}
+        <img src="{{book.cover_image.url}}" alt="" class="w-full h-[420px] rounded-lg">
+        {% else %}
+        <p>No image</p>
+        {% endif %}
+        <h4 class="font-bold text-2xl py-2">
         <a href="{% url "book_details" book.id %}">
-            Title: {{book.title}}
+                {{book.title}}
         </a>
-    </h4>
- {% endfor %}
+        </h4>
+        <hr class="border-2">
+     </div>
+     {% endfor %}
+ </div>
 {% endblock content%}
